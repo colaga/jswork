@@ -25,4 +25,4 @@ for(var j=1;j<=1;++j){
 str += '<tr>'
 }
 str += '</table>'
-document.getElementById('table').innerHTML =str
+document.getElementById('table').innerHTML =str    
