@@ -23,9 +23,9 @@ document.getElementById('table2').innerHTML = str
 
 //倒九九乘法表
 str = '<table border="1">'
-for(var i =9;i>0;--i){
+for(var i=9;i>0;--i){
     str += '<tr>'
-    for(var j=1;j>0;--j){
+    for(var j=i;j>0;--j){
         str += '<td>' + i + '*' + j + '=' + ( i * j ) +'</td>'
     }
     str += '</tr>'
