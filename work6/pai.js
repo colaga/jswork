@@ -1,8 +1,8 @@
 function calculate(){
-    let num =document.getElementById('colaga').nodeValu
-    num = parseFloat(num)&&Number(num)
+    let num =document.getElementById('').Value
+    num = parseInt(num)&&Number(num)
     if(!isNaN(num)){
-        document.getElementById('colaga')
+        document.getElementById('').Value= pi()
     }
 }
 function factorial(n){
@@ -17,5 +17,7 @@ function oddFactorisl(n){
 }
 return sum
 function pi(num){
-    
+    let dividend = factorial()
 } 
+return sum
+calculate()
