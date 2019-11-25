@@ -12,7 +12,7 @@ function monkey(){
         monkey.push(i)
     }
     let i=0
-    while (monkey.length>1){
+    while (monkey.length>1){ 
         i++;
         head = monkey.shift()
         if(i%kick!=0){
