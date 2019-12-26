@@ -5,6 +5,35 @@ const bodyParset = require("body-parser")
 app.use(express.static('.'))
 app.use(bodyParset.json());
 app.use(bodyParset.urlencoded({ extended: false }));
+
+app.use(express.static('http://139.9.81.203:8090/upload'))
+const multer = require('multer');
+var storage = multer.diskStorage({
+    destination:function(req,file,cb){
+        cb(null,'http://139.9.81.203:8090/upload')
+
+    },
+    filename:function(req,file,cb){
+        var fileFormat = (file.originalname).split(".");
+        cb(null,file.filename+'-'+Date.now()+"."+[fileFormat.length-1])
+
+    }
+});
+let upload = multer({storage:storage})
+app.post('/upload',upload.single('file'),function(req,res,next){
+    var file = req.file;
+    console.log("original file name is+file.originalname");
+    console.log("file name is"+file.filename);
+    res.json('/'+file.filename);
+})
+
+let upload = multer({storage:storage})
+app.post('/upload',upload.single(ifil))
+
+
+
+
+
 app.post('/formBuilder', function (req, res) {
     console.log(req.body)
     res.send(req.body)
