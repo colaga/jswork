@@ -27,8 +27,7 @@ app.post('/upload',upload.single('file'),function(req,res,next){
     res.json('/'+file.filename);
 })
 
-let upload = multer({storage:storage})
-app.post('/upload',upload.single(ifil))
+
 
 
 
